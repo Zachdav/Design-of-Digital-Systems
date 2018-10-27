@@ -1,0 +1,483 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: TopModule.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TopModule.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TopModule"
+Output Format                      : NGC
+Target Device                      : xc3s500e-5-fg320
+
+---- Source Options
+Top Module Name                    : TopModule
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "TwoByOneMux.v" in library work
+Compiling verilog file "SegDisplay.v" in library work
+Module <Mux2x1> compiled
+Compiling verilog file "Refresher.v" in library work
+Module <Seven_Segment_Display> compiled
+Compiling verilog file "Counter.v" in library work
+Module <Refresh> compiled
+Compiling verilog file "ClockDivider.v" in library work
+Module <Counter> compiled
+Compiling verilog file "BinaryToBCD.v" in library work
+Module <Clock_Divider> compiled
+Compiling verilog file "BCDDispDriver.v" in library work
+Module <BinToBCD> compiled
+Compiling verilog file "TopModule.v" in library work
+Module <Display_Driver> compiled
+Module <TopModule> compiled
+No errors in compilation
+Analysis of file <"TopModule.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <TopModule> in library <work>.
+
+Analyzing hierarchy for module <Clock_Divider> in library <work>.
+
+Analyzing hierarchy for module <Counter> in library <work>.
+
+Analyzing hierarchy for module <BinToBCD> in library <work>.
+
+Analyzing hierarchy for module <Display_Driver> in library <work>.
+
+Analyzing hierarchy for module <Refresh> in library <work> with parameters.
+	Divider = "00000000000000000000000000000010"
+
+Analyzing hierarchy for module <Mux2x1> in library <work>.
+
+Analyzing hierarchy for module <Seven_Segment_Display> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <TopModule>.
+Module <TopModule> is correct for synthesis.
+ 
+Analyzing module <Clock_Divider> in library <work>.
+Module <Clock_Divider> is correct for synthesis.
+ 
+Analyzing module <Counter> in library <work>.
+Module <Counter> is correct for synthesis.
+ 
+Analyzing module <BinToBCD> in library <work>.
+Module <BinToBCD> is correct for synthesis.
+ 
+Analyzing module <Display_Driver> in library <work>.
+Module <Display_Driver> is correct for synthesis.
+ 
+Analyzing module <Refresh> in library <work>.
+	Divider = 32'sb00000000000000000000000000000010
+Module <Refresh> is correct for synthesis.
+ 
+Analyzing module <Mux2x1> in library <work>.
+WARNING:Xst:905 - "TwoByOneMux.v" line 19: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <Tens>, <Ones>
+Module <Mux2x1> is correct for synthesis.
+ 
+Analyzing module <Seven_Segment_Display> in library <work>.
+Module <Seven_Segment_Display> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Clock_Divider>.
+    Related source file is "ClockDivider.v".
+    Found 1-bit register for signal <Clk_Out>.
+    Found 25-bit up counter for signal <counter>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <Clock_Divider> synthesized.
+
+
+Synthesizing Unit <Counter>.
+    Related source file is "Counter.v".
+    Found 4-bit updown counter for signal <Count>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <Counter> synthesized.
+
+
+Synthesizing Unit <BinToBCD>.
+    Related source file is "BinaryToBCD.v".
+    Found 16x8-bit ROM for signal <Counter$rom0000>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <BinToBCD> synthesized.
+
+
+Synthesizing Unit <Refresh>.
+    Related source file is "Refresher.v".
+    Register <Selector> equivalent to <Refresh> has been removed
+    Found 1-bit register for signal <Refresh>.
+    Found 1-bit register for signal <Clk_Count>.
+    Found 20-bit up counter for signal <Counter>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   2 D-type flip-flop(s).
+Unit <Refresh> synthesized.
+
+
+Synthesizing Unit <Mux2x1>.
+    Related source file is "TwoByOneMux.v".
+Unit <Mux2x1> synthesized.
+
+
+Synthesizing Unit <Seven_Segment_Display>.
+    Related source file is "SegDisplay.v".
+Unit <Seven_Segment_Display> synthesized.
+
+
+Synthesizing Unit <Display_Driver>.
+    Related source file is "BCDDispDriver.v".
+Unit <Display_Driver> synthesized.
+
+
+Synthesizing Unit <TopModule>.
+    Related source file is "TopModule.v".
+WARNING:Xst:653 - Signal <ClkIn> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <TopModule> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x8-bit ROM                                          : 1
+# Counters                                             : 3
+ 20-bit up counter                                     : 1
+ 25-bit up counter                                     : 1
+ 4-bit updown counter                                  : 1
+# Registers                                            : 3
+ 1-bit register                                        : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <Clk_Out> (without init value) has a constant value of 0 in block <Clock_Divider_1>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x8-bit ROM                                          : 1
+# Counters                                             : 3
+ 20-bit up counter                                     : 1
+ 25-bit up counter                                     : 1
+ 4-bit updown counter                                  : 1
+# Registers                                            : 3
+ Flip-Flops                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <Clock_Divider_1/Clk_Out> (without init value) has a constant value of 0 in block <TopModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <Counter_1/Count_0> has a constant value of 0 in block <TopModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Counter_1/Count_1> has a constant value of 0 in block <TopModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Counter_1/Count_2> has a constant value of 0 in block <TopModule>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Counter_1/Count_3> has a constant value of 0 in block <TopModule>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <TopModule> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TopModule, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 22
+ Flip-Flops                                            : 22
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : TopModule.ngr
+Top Level Output File Name         : TopModule
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 13
+
+Cell Usage :
+# BELS                             : 74
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 19
+#      LUT2                        : 2
+#      LUT4                        : 5
+#      MUXCY                       : 24
+#      VCC                         : 1
+#      XORCY                       : 20
+# FlipFlops/Latches                : 22
+#      FDR                         : 21
+#      FDRE                        : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 9
+#      IBUF                        : 1
+#      OBUF                        : 8
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                       14  out of   4656     0%  
+ Number of Slice Flip Flops:             22  out of   9312     0%  
+ Number of 4 input LUTs:                 28  out of   9312     0%  
+ Number of IOs:                          13
+ Number of bonded IOBs:                  10  out of    232     4%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clk                                | BUFGP                  | 22    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 5.369ns (Maximum Frequency: 186.254MHz)
+   Minimum input arrival time before clock: 4.053ns
+   Maximum output required time after clock: 4.040ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clk'
+  Clock period: 5.369ns (frequency: 186.254MHz)
+  Total number of paths / destination ports: 652 / 43
+-------------------------------------------------------------------------
+Delay:               5.369ns (Levels of Logic = 7)
+  Source:            Display_Driver_1/Refresh_1/Counter_7 (FF)
+  Destination:       Display_Driver_1/Refresh_1/Counter_0 (FF)
+  Source Clock:      Clk rising
+  Destination Clock: Clk rising
+
+  Data Path: Display_Driver_1/Refresh_1/Counter_7 to Display_Driver_1/Refresh_1/Counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.514   0.532  Display_Driver_1/Refresh_1/Counter_7 (Display_Driver_1/Refresh_1/Counter_7)
+     LUT4:I0->O            1   0.612   0.000  Display_Driver_1/Refresh_1/Clk_Count_cmp_eq0000_wg_lut<0> (Display_Driver_1/Refresh_1/Clk_Count_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  Display_Driver_1/Refresh_1/Clk_Count_cmp_eq0000_wg_cy<0> (Display_Driver_1/Refresh_1/Clk_Count_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  Display_Driver_1/Refresh_1/Clk_Count_cmp_eq0000_wg_cy<1> (Display_Driver_1/Refresh_1/Clk_Count_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  Display_Driver_1/Refresh_1/Clk_Count_cmp_eq0000_wg_cy<2> (Display_Driver_1/Refresh_1/Clk_Count_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  Display_Driver_1/Refresh_1/Clk_Count_cmp_eq0000_wg_cy<3> (Display_Driver_1/Refresh_1/Clk_Count_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           3   0.289   0.520  Display_Driver_1/Refresh_1/Clk_Count_cmp_eq0000_wg_cy<4> (Display_Driver_1/Refresh_1/Clk_Count_cmp_eq0000)
+     LUT2:I1->O           20   0.612   0.937  Display_Driver_1/Refresh_1/Counter_or00001 (Display_Driver_1/Refresh_1/Counter_or0000)
+     FDR:R                     0.795          Display_Driver_1/Refresh_1/Counter_0
+    ----------------------------------------
+    Total                      5.369ns (3.380ns logic, 1.989ns route)
+                                       (63.0% logic, 37.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
+  Total number of paths / destination ports: 22 / 22
+-------------------------------------------------------------------------
+Offset:              4.053ns (Levels of Logic = 2)
+  Source:            Rst (PAD)
+  Destination:       Display_Driver_1/Refresh_1/Counter_0 (FF)
+  Destination Clock: Clk rising
+
+  Data Path: Rst to Display_Driver_1/Refresh_1/Counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.106   0.603  Rst_IBUF (Rst_IBUF)
+     LUT2:I0->O           20   0.612   0.937  Display_Driver_1/Refresh_1/Counter_or00001 (Display_Driver_1/Refresh_1/Counter_or0000)
+     FDR:R                     0.795          Display_Driver_1/Refresh_1/Counter_0
+    ----------------------------------------
+    Total                      4.053ns (2.513ns logic, 1.540ns route)
+                                       (62.0% logic, 38.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.040ns (Levels of Logic = 1)
+  Source:            Display_Driver_1/Refresh_1/Refresh (FF)
+  Destination:       Selector (PAD)
+  Source Clock:      Clk rising
+
+  Data Path: Display_Driver_1/Refresh_1/Refresh to Selector
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.514   0.357  Display_Driver_1/Refresh_1/Refresh (Display_Driver_1/Refresh_1/Refresh)
+     OBUF:I->O                 3.169          Selector_OBUF (Selector)
+    ----------------------------------------
+    Total                      4.040ns (3.683ns logic, 0.357ns route)
+                                       (91.2% logic, 8.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.78 secs
+ 
+--> 
+
+Total memory usage is 253424 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    9 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

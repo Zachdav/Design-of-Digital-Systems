@@ -1,0 +1,102 @@
+xst -intstyle ise -ifn "F:/Final Project/Final_Project/Top_Mod.xst" -ofn "F:/Final Project/Final_Project/Top_Mod.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Top_Mod.ucf -p xc3s100e-vq100-5 "Top_Mod.ngc" Top_Mod.ngd  
+map -intstyle ise -p xc3s100e-vq100-5 -cm area -ir off -pr off -c 100 -o Top_Mod_map.ncd Top_Mod.ngd Top_Mod.pcf 
+xst -intstyle ise -ifn "F:/Final Project/Final_Project/Top_Mod.xst" -ofn "F:/Final Project/Final_Project/Top_Mod.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Top_Mod.ucf -p xc3s500e-fg320-5 "Top_Mod.ngc" Top_Mod.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Top_Mod_map.ncd Top_Mod.ngd Top_Mod.pcf 
+par -w -intstyle ise -ol high -t 1 Top_Mod_map.ncd Top_Mod.ncd Top_Mod.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Top_Mod.twx Top_Mod.ncd -o Top_Mod.twr Top_Mod.pcf -ucf Top_Mod.ucf 
+bitgen -intstyle ise -f Top_Mod.ut Top_Mod.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Top_Mod.ucf -p xc3s500e-fg320-5 "Top_Mod.ngc" Top_Mod.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Top_Mod.ucf -p xc3s500e-fg320-5 "Top_Mod.ngc" Top_Mod.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Top_Mod_map.ncd Top_Mod.ngd Top_Mod.pcf 
+par -w -intstyle ise -ol high -t 1 Top_Mod_map.ncd Top_Mod.ncd Top_Mod.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Top_Mod.twx Top_Mod.ncd -o Top_Mod.twr Top_Mod.pcf -ucf Top_Mod.ucf 
+bitgen -intstyle ise -f Top_Mod.ut Top_Mod.ncd 
+xst -intstyle ise -ifn "F:/Final Project/Final_Project/Top_Mod.xst" -ofn "F:/Final Project/Final_Project/Top_Mod.syr" 
+xst -intstyle ise -ifn "F:/Final Project/Final_Project/Top_Mod.xst" -ofn "F:/Final Project/Final_Project/Top_Mod.syr" 
+xst -intstyle ise -ifn "F:/Final Project/Final_Project/Top_Mod.xst" -ofn "F:/Final Project/Final_Project/Top_Mod.syr" 
+xst -intstyle ise -ifn "F:/Final Project/Final_Project/Top_Mod.xst" -ofn "F:/Final Project/Final_Project/Top_Mod.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Top_Mod.ucf -p xc3s500e-fg320-5 "Top_Mod.ngc" Top_Mod.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Top_Mod_map.ncd Top_Mod.ngd Top_Mod.pcf 
+par -w -intstyle ise -ol high -t 1 Top_Mod_map.ncd Top_Mod.ncd Top_Mod.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Top_Mod.twx Top_Mod.ncd -o Top_Mod.twr Top_Mod.pcf -ucf Top_Mod.ucf 
+bitgen -intstyle ise -f Top_Mod.ut Top_Mod.ncd 
+xst -intstyle ise -ifn "F:/Final Project/Final_Project/Top_Mod.xst" -ofn "F:/Final Project/Final_Project/Top_Mod.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Top_Mod.ucf -p xc3s500e-fg320-5 "Top_Mod.ngc" Top_Mod.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Top_Mod_map.ncd Top_Mod.ngd Top_Mod.pcf 
+par -w -intstyle ise -ol high -t 1 Top_Mod_map.ncd Top_Mod.ncd Top_Mod.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Top_Mod.twx Top_Mod.ncd -o Top_Mod.twr Top_Mod.pcf -ucf Top_Mod.ucf 
+bitgen -intstyle ise -f Top_Mod.ut Top_Mod.ncd 
+xst -intstyle ise -ifn "F:/Final Project/Final_Project/Top_Mod.xst" -ofn "F:/Final Project/Final_Project/Top_Mod.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Top_Mod.ucf -p xc3s500e-fg320-5 "Top_Mod.ngc" Top_Mod.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Top_Mod_map.ncd Top_Mod.ngd Top_Mod.pcf 
+par -w -intstyle ise -ol high -t 1 Top_Mod_map.ncd Top_Mod.ncd Top_Mod.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Top_Mod.twx Top_Mod.ncd -o Top_Mod.twr Top_Mod.pcf -ucf Top_Mod.ucf 
+bitgen -intstyle ise -f Top_Mod.ut Top_Mod.ncd 
+xst -intstyle ise -ifn "F:/Final Project/Final_Project/Top_Mod.xst" -ofn "F:/Final Project/Final_Project/Top_Mod.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Top_Mod.ucf -p xc3s500e-fg320-5 "Top_Mod.ngc" Top_Mod.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Top_Mod_map.ncd Top_Mod.ngd Top_Mod.pcf 
+par -w -intstyle ise -ol high -t 1 Top_Mod_map.ncd Top_Mod.ncd Top_Mod.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Top_Mod.twx Top_Mod.ncd -o Top_Mod.twr Top_Mod.pcf -ucf Top_Mod.ucf 
+bitgen -intstyle ise -f Top_Mod.ut Top_Mod.ncd 
+xst -intstyle ise -ifn "F:/Final Project/Final_Project/Top_Mod.xst" -ofn "F:/Final Project/Final_Project/Top_Mod.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Top_Mod.ucf -p xc3s500e-fg320-5 "Top_Mod.ngc" Top_Mod.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Top_Mod_map.ncd Top_Mod.ngd Top_Mod.pcf 
+par -w -intstyle ise -ol high -t 1 Top_Mod_map.ncd Top_Mod.ncd Top_Mod.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Top_Mod.twx Top_Mod.ncd -o Top_Mod.twr Top_Mod.pcf -ucf Top_Mod.ucf 
+bitgen -intstyle ise -f Top_Mod.ut Top_Mod.ncd 
+xst -intstyle ise -ifn "F:/Final Project/Final_Project/Top_Mod.xst" -ofn "F:/Final Project/Final_Project/Top_Mod.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Top_Mod.ucf -p xc3s500e-fg320-5 "Top_Mod.ngc" Top_Mod.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Top_Mod_map.ncd Top_Mod.ngd Top_Mod.pcf 
+par -w -intstyle ise -ol high -t 1 Top_Mod_map.ncd Top_Mod.ncd Top_Mod.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Top_Mod.twx Top_Mod.ncd -o Top_Mod.twr Top_Mod.pcf -ucf Top_Mod.ucf 
+bitgen -intstyle ise -f Top_Mod.ut Top_Mod.ncd 
+xst -intstyle ise -ifn "E:/Final Project/Final_Project/Top_Mod.xst" -ofn "E:/Final Project/Final_Project/Top_Mod.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Top_Mod.ucf -p xc3s500e-fg320-5 "Top_Mod.ngc" Top_Mod.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Top_Mod_map.ncd Top_Mod.ngd Top_Mod.pcf 
+par -w -intstyle ise -ol high -t 1 Top_Mod_map.ncd Top_Mod.ncd Top_Mod.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Top_Mod.twx Top_Mod.ncd -o Top_Mod.twr Top_Mod.pcf -ucf Top_Mod.ucf 
+bitgen -intstyle ise -f Top_Mod.ut Top_Mod.ncd 
+xst -intstyle ise -ifn "G:/Final Project/Final_Project/Top_Mod.xst" -ofn "G:/Final Project/Final_Project/Top_Mod.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Top_Mod.ucf -p xc3s500e-fg320-5 "Top_Mod.ngc" Top_Mod.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Top_Mod_map.ncd Top_Mod.ngd Top_Mod.pcf 
+par -w -intstyle ise -ol high -t 1 Top_Mod_map.ncd Top_Mod.ncd Top_Mod.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Top_Mod.twx Top_Mod.ncd -o Top_Mod.twr Top_Mod.pcf -ucf Top_Mod.ucf 
+bitgen -intstyle ise -f Top_Mod.ut Top_Mod.ncd 
+xst -intstyle ise -ifn "G:/Final Project/Final_Project/Top_Mod.xst" -ofn "G:/Final Project/Final_Project/Top_Mod.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Top_Mod.ucf -p xc3s500e-fg320-5 "Top_Mod.ngc" Top_Mod.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Top_Mod_map.ncd Top_Mod.ngd Top_Mod.pcf 
+par -w -intstyle ise -ol high -t 1 Top_Mod_map.ncd Top_Mod.ncd Top_Mod.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Top_Mod.twx Top_Mod.ncd -o Top_Mod.twr Top_Mod.pcf -ucf Top_Mod.ucf 
+bitgen -intstyle ise -f Top_Mod.ut Top_Mod.ncd 
+xst -intstyle ise -ifn "G:/Final Project/Final_Project/Top_Mod.xst" -ofn "G:/Final Project/Final_Project/Top_Mod.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Top_Mod.ucf -p xc3s500e-fg320-5 "Top_Mod.ngc" Top_Mod.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Top_Mod_map.ncd Top_Mod.ngd Top_Mod.pcf 
+par -w -intstyle ise -ol high -t 1 Top_Mod_map.ncd Top_Mod.ncd Top_Mod.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Top_Mod.twx Top_Mod.ncd -o Top_Mod.twr Top_Mod.pcf -ucf Top_Mod.ucf 
+bitgen -intstyle ise -f Top_Mod.ut Top_Mod.ncd 
+xst -intstyle ise -ifn "G:/Final Project/Final_Project/Top_Mod.xst" -ofn "G:/Final Project/Final_Project/Top_Mod.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Top_Mod.ucf -p xc3s500e-fg320-5 "Top_Mod.ngc" Top_Mod.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Top_Mod_map.ncd Top_Mod.ngd Top_Mod.pcf 
+par -w -intstyle ise -ol high -t 1 Top_Mod_map.ncd Top_Mod.ncd Top_Mod.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Top_Mod.twx Top_Mod.ncd -o Top_Mod.twr Top_Mod.pcf -ucf Top_Mod.ucf 
+bitgen -intstyle ise -f Top_Mod.ut Top_Mod.ncd 
+xst -intstyle ise -ifn "G:/Final Project/Final_Project/Top_Mod.xst" -ofn "G:/Final Project/Final_Project/Top_Mod.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Top_Mod.ucf -p xc3s500e-fg320-5 "Top_Mod.ngc" Top_Mod.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Top_Mod_map.ncd Top_Mod.ngd Top_Mod.pcf 
+par -w -intstyle ise -ol high -t 1 Top_Mod_map.ncd Top_Mod.ncd Top_Mod.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Top_Mod.twx Top_Mod.ncd -o Top_Mod.twr Top_Mod.pcf -ucf Top_Mod.ucf 
+bitgen -intstyle ise -f Top_Mod.ut Top_Mod.ncd 
+xst -intstyle ise -ifn "G:/Final Project/Final_Project/Top_Mod.xst" -ofn "G:/Final Project/Final_Project/Top_Mod.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Top_Mod.ucf -p xc3s500e-fg320-5 "Top_Mod.ngc" Top_Mod.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Top_Mod_map.ncd Top_Mod.ngd Top_Mod.pcf 
+par -w -intstyle ise -ol high -t 1 Top_Mod_map.ncd Top_Mod.ncd Top_Mod.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Top_Mod.twx Top_Mod.ncd -o Top_Mod.twr Top_Mod.pcf -ucf Top_Mod.ucf 
+bitgen -intstyle ise -f Top_Mod.ut Top_Mod.ncd 
+xst -intstyle ise -ifn "G:/Final Project/Final_Project/Top_Mod.xst" -ofn "G:/Final Project/Final_Project/Top_Mod.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Top_Mod.ucf -p xc3s500e-fg320-5 "Top_Mod.ngc" Top_Mod.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Top_Mod_map.ncd Top_Mod.ngd Top_Mod.pcf 
+par -w -intstyle ise -ol high -t 1 Top_Mod_map.ncd Top_Mod.ncd Top_Mod.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Top_Mod.twx Top_Mod.ncd -o Top_Mod.twr Top_Mod.pcf -ucf Top_Mod.ucf 
+bitgen -intstyle ise -f Top_Mod.ut Top_Mod.ncd 

@@ -1,0 +1,29 @@
+Command line:
+   invgate_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  54386
+
+Fri Sep 01 14:24:19 2017
+
+
+ Elaboration Time: 0.0156 sec
+
+ Current Memory Usage: 501.752 Meg
+
+ Total Signals          : 14
+ Total Nets             : 15
+ Total Signal Drivers   : 6
+ Total Blocks           : 2
+ Total Primitive Blocks : 2
+ Total Processes        : 8
+ Total Traceable Variables  : 19
+ Total Scalar Nets and Variables : 96
+Total Line Count : 17
+
+ Total Simulation Time: 0.0156 sec
+
+ Current Memory Usage: 501.752 Meg
+
+Fri Sep 01 14:24:33 2017
+

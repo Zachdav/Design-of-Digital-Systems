@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "F:/Digital/Lab02/Beltwarn_structural/Beltwarn_structural/beltwarn_structural_tb_isim_beh.exe" -prj "F:/Digital/Lab02/Beltwarn_structural/Beltwarn_structural/beltwarn_structural_tb_beh.prj" "work.beltwarn_structural_tb" "work.glbl" 

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "F:/Digital/Lab03/Seven_Segment_Display/Seven_Segment_Display_tb_isim_beh.exe" -prj "F:/Digital/Lab03/Seven_Segment_Display/Seven_Segment_Display_tb_beh.prj" "work.Seven_Segment_Display_tb" "work.glbl" 

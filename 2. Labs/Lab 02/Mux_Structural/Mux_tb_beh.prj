@@ -1,0 +1,3 @@
+verilog work "Mux_Structural.v"
+verilog work "Mux_Structural_tb.v"
+verilog work "C:/Xilinx/14.2/ISE_DS/ISE//verilog/src/glbl.v"

@@ -1,0 +1,29 @@
+Command line:
+   and2gate_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  59939
+
+Fri Aug 25 13:41:17 2017
+
+
+ Elaboration Time: 0.0156 sec
+
+ Current Memory Usage: 504.877 Meg
+
+ Total Signals          : 15
+ Total Nets             : 16
+ Total Signal Drivers   : 6
+ Total Blocks           : 2
+ Total Primitive Blocks : 2
+ Total Processes        : 8
+ Total Traceable Variables  : 19
+ Total Scalar Nets and Variables : 97
+Total Line Count : 17
+
+ Total Simulation Time: 0.0156 sec
+
+ Current Memory Usage: 504.877 Meg
+
+Fri Aug 25 13:41:28 2017
+

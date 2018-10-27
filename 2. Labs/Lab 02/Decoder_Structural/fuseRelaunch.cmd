@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "F:/Digital/Lab02/Decoder_Structural/Decoder_Structural_tb_isim_beh.exe" -prj "F:/Digital/Lab02/Decoder_Structural/Decoder_Structural_tb_beh.prj" "work.Decoder_Structural_tb" "work.glbl" 

@@ -1,0 +1,30 @@
+Command line:
+   ReactionTimer_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  40403
+
+Fri Nov 17 15:39:17 2017
+
+
+ Elaboration Time: 0 sec
+
+ Current Memory Usage: 504.918 Meg
+
+ Total Signals          : 71
+ Total Nets             : 223
+ Total Signal Drivers   : 35
+ Total Blocks           : 9
+ Total Primitive Blocks : 6
+ Total Processes        : 45
+ Total Traceable Variables  : 137
+ Total Scalar Nets and Variables : 3704
+Total Line Count : 568
+Total Line Count : 568
+
+ Total Simulation Time: 17.6593 sec
+
+ Current Memory Usage: 504.918 Meg
+
+Fri Nov 17 15:42:59 2017
+

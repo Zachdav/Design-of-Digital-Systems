@@ -1,0 +1,29 @@
+Command line:
+   Thunderbird_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  50504
+
+Mon Oct 09 14:58:58 2017
+
+
+ Elaboration Time: 0 sec
+
+ Current Memory Usage: 504.93 Meg
+
+ Total Signals          : 23
+ Total Nets             : 23
+ Total Signal Drivers   : 15
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 20
+ Total Traceable Variables  : 37
+ Total Scalar Nets and Variables : 343
+Total Line Count : 147
+
+ Total Simulation Time: 0.1092 sec
+
+ Current Memory Usage: 504.93 Meg
+
+Mon Oct 09 14:59:56 2017
+

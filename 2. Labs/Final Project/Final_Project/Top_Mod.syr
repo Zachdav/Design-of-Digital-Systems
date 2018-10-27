@@ -1,0 +1,1168 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: Top_Mod.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Top_Mod.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Top_Mod"
+Output Format                      : NGC
+Target Device                      : xc3s500e-5-fg320
+
+---- Source Options
+Top Module Name                    : Top_Mod
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "LCDInterface.v" in library work
+Module <LCDCntrl> compiled
+Module <LCDDriver> compiled
+Compiling verilog file "Bin2BCD.v" in library work
+Module <LCDInterface> compiled
+Compiling verilog file "ReactionTimer.v" in library work
+Module <Bin2BCD> compiled
+Compiling verilog file "RandomGen.v" in library work
+Module <ReactionTimer> compiled
+Compiling verilog file "LCDDisplay.v" in library work
+Module <RandomGen> compiled
+Compiling verilog file "LCDClkDiv.v" in library work
+Module <LCDDisplay> compiled
+Compiling verilog file "ClkDiv.v" in library work
+Module <LCDClkDiv> compiled
+Compiling verilog file "Top_Mod.v" in library work
+Module <ClkDiv> compiled
+Module <Top_Mod> compiled
+No errors in compilation
+Analysis of file <"Top_Mod.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <Top_Mod> in library <work>.
+
+Analyzing hierarchy for module <ClkDiv> in library <work> with parameters.
+	DivVal = "00000000000000000110000110101000"
+
+Analyzing hierarchy for module <LCDClkDiv> in library <work> with parameters.
+	DivVal = "00000000000000000000010011100010"
+
+Analyzing hierarchy for module <ReactionTimer> in library <work> with parameters.
+	S_Cheat = "00000000000000000000000000000100"
+	S_Delay = "00000000000000000000000000000110"
+	S_Initial = "00000000000000000000000000000000"
+	S_Reaction = "00000000000000000000000000000010"
+	S_Slow = "00000000000000000000000000000101"
+	S_Wait = "00000000000000000000000000000001"
+	S_Win = "00000000000000000000000000000011"
+
+Analyzing hierarchy for module <RandomGen> in library <work>.
+
+Analyzing hierarchy for module <LCDDisplay> in library <work> with parameters.
+	CheatString = "No Cheating!    "
+	InitString = "Reaction Timer  "
+	ReactionString = "0.000 s         "
+	S_Cheat = "00000000000000000000000000000100"
+	S_Init = "00000000000000000000000000000000"
+	S_LCDAck = "00000000000000000000000000000011"
+	S_Reaction = "00000000000000000000000000000010"
+	S_Slow = "00000000000000000000000000000101"
+	S_Wait = "00000000000000000000000000000001"
+	S_WaitString = "00000000000000000000000000000110"
+	SlowString = "Too Slow!       "
+	WaitString = "Wait for LEDs..."
+
+Analyzing hierarchy for module <LCDInterface> in library <work>.
+
+Analyzing hierarchy for module <Bin2BCD> in library <work>.
+
+Analyzing hierarchy for module <LCDCntrl> in library <work> with parameters.
+	C8_0 = "00000000000000000000000000000000"
+	S_Init0 = "00000000000000000000000000000000"
+	S_Init1 = "00000000000000000000000000000001"
+	S_PosAck = "00000000000000000000000000000100"
+	S_PosDone = "00000000000000000000000000000101"
+	S_PosInit = "00000000000000000000000000000010"
+	S_PosWait = "00000000000000000000000000000011"
+	S_StrAck = "00000000000000000000000000001000"
+	S_StrInit = "00000000000000000000000000000110"
+	S_StrIter = "00000000000000000000000000001001"
+	S_StrWait = "00000000000000000000000000000111"
+	S_Wait = "00000000000000000000000000001110"
+
+Analyzing hierarchy for module <LCDDriver> in library <work> with parameters.
+	C9_0 = "000000000"
+	C9_103 = "001100111"
+	C9_2 = "000000010"
+	C9_200 = "011001000"
+	C9_3 = "000000011"
+	C9_375 = "101110111"
+	C9_42 = "000101010"
+	Clear_S0 = "00000000000000000000000000011010"
+	Clear_S1 = "00000000000000000000000000011011"
+	Clear_S2 = "00000000000000000000000000011100"
+	Clear_S3 = "00000000000000000000000000011101"
+	Clear_S4 = "00000000000000000000000000011110"
+	INIT_S0 = "00000000000000000000000000000000"
+	INIT_S1 = "00000000000000000000000000000001"
+	INIT_S10 = "00000000000000000000000000001010"
+	INIT_S11 = "00000000000000000000000000001011"
+	INIT_S12 = "00000000000000000000000000001100"
+	INIT_S13 = "00000000000000000000000000001101"
+	INIT_S14 = "00000000000000000000000000001110"
+	INIT_S15 = "00000000000000000000000000001111"
+	INIT_S16 = "00000000000000000000000000010000"
+	INIT_S17 = "00000000000000000000000000010001"
+	INIT_S18 = "00000000000000000000000000010010"
+	INIT_S19 = "00000000000000000000000000010011"
+	INIT_S1e = "00000000000000000000000000101001"
+	INIT_S2 = "00000000000000000000000000000010"
+	INIT_S20 = "00000000000000000000000000010100"
+	INIT_S21 = "00000000000000000000000000010101"
+	INIT_S22 = "00000000000000000000000000010110"
+	INIT_S23 = "00000000000000000000000000010111"
+	INIT_S24 = "00000000000000000000000000011000"
+	INIT_S3 = "00000000000000000000000000000011"
+	INIT_S4 = "00000000000000000000000000000100"
+	INIT_S5 = "00000000000000000000000000000101"
+	INIT_S6 = "00000000000000000000000000000110"
+	INIT_S7 = "00000000000000000000000000000111"
+	INIT_S7e = "00000000000000000000000000101010"
+	INIT_S8 = "00000000000000000000000000001000"
+	INIT_S9 = "00000000000000000000000000001001"
+	WAIT = "00000000000000000000000000011001"
+	WR_CMD_S0 = "00000000000000000000000000011111"
+	WR_CMD_S1 = "00000000000000000000000000100000"
+	WR_CMD_S2 = "00000000000000000000000000100001"
+	WR_CMD_S3 = "00000000000000000000000000100010"
+	WR_CMD_S4 = "00000000000000000000000000100011"
+	WR_DATA_S0 = "00000000000000000000000000100100"
+	WR_DATA_S1 = "00000000000000000000000000100101"
+	WR_DATA_S2 = "00000000000000000000000000100110"
+	WR_DATA_S3 = "00000000000000000000000000100111"
+	WR_DATA_S4 = "00000000000000000000000000101000"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <Top_Mod>.
+Module <Top_Mod> is correct for synthesis.
+ 
+Analyzing module <ClkDiv> in library <work>.
+	DivVal = 32'sb00000000000000000110000110101000
+Module <ClkDiv> is correct for synthesis.
+ 
+Analyzing module <LCDClkDiv> in library <work>.
+	DivVal = 32'sb00000000000000000000010011100010
+Module <LCDClkDiv> is correct for synthesis.
+ 
+Analyzing module <ReactionTimer> in library <work>.
+	S_Cheat = 32'sb00000000000000000000000000000100
+	S_Delay = 32'sb00000000000000000000000000000110
+	S_Initial = 32'sb00000000000000000000000000000000
+	S_Reaction = 32'sb00000000000000000000000000000010
+	S_Slow = 32'sb00000000000000000000000000000101
+	S_Wait = 32'sb00000000000000000000000000000001
+	S_Win = 32'sb00000000000000000000000000000011
+WARNING:Xst:1643 - "ReactionTimer.v" line 41: You are giving the signal counter a default value. counter already had a default value, which will be overridden by this one.
+Module <ReactionTimer> is correct for synthesis.
+ 
+Analyzing module <RandomGen> in library <work>.
+Module <RandomGen> is correct for synthesis.
+ 
+Analyzing module <LCDDisplay> in library <work>.
+	CheatString = "No Cheating!    "
+	InitString = "Reaction Timer  "
+	ReactionString = "0.000 s         "
+	S_Cheat = 32'sb00000000000000000000000000000100
+	S_Init = 32'sb00000000000000000000000000000000
+	S_LCDAck = 32'sb00000000000000000000000000000011
+	S_Reaction = 32'sb00000000000000000000000000000010
+	S_Slow = 32'sb00000000000000000000000000000101
+	S_Wait = 32'sb00000000000000000000000000000001
+	S_WaitString = 32'sb00000000000000000000000000000110
+	SlowString = "Too Slow!       "
+	WaitString = "Wait for LEDs..."
+Module <LCDDisplay> is correct for synthesis.
+ 
+Analyzing module <LCDInterface> in library <work>.
+Module <LCDInterface> is correct for synthesis.
+ 
+Analyzing module <LCDCntrl> in library <work>.
+	C8_0 = 32'sb00000000000000000000000000000000
+	S_Init0 = 32'sb00000000000000000000000000000000
+	S_Init1 = 32'sb00000000000000000000000000000001
+	S_PosAck = 32'sb00000000000000000000000000000100
+	S_PosDone = 32'sb00000000000000000000000000000101
+	S_PosInit = 32'sb00000000000000000000000000000010
+	S_PosWait = 32'sb00000000000000000000000000000011
+	S_StrAck = 32'sb00000000000000000000000000001000
+	S_StrInit = 32'sb00000000000000000000000000000110
+	S_StrIter = 32'sb00000000000000000000000000001001
+	S_StrWait = 32'sb00000000000000000000000000000111
+	S_Wait = 32'sb00000000000000000000000000001110
+Module <LCDCntrl> is correct for synthesis.
+ 
+Analyzing module <LCDDriver> in library <work>.
+	C9_0 = 9'b000000000
+	C9_103 = 9'b001100111
+	C9_2 = 9'b000000010
+	C9_200 = 9'b011001000
+	C9_3 = 9'b000000011
+	C9_375 = 9'b101110111
+	C9_42 = 9'b000101010
+	Clear_S0 = 32'sb00000000000000000000000000011010
+	Clear_S1 = 32'sb00000000000000000000000000011011
+	Clear_S2 = 32'sb00000000000000000000000000011100
+	Clear_S3 = 32'sb00000000000000000000000000011101
+	Clear_S4 = 32'sb00000000000000000000000000011110
+	INIT_S0 = 32'sb00000000000000000000000000000000
+	INIT_S1 = 32'sb00000000000000000000000000000001
+	INIT_S10 = 32'sb00000000000000000000000000001010
+	INIT_S11 = 32'sb00000000000000000000000000001011
+	INIT_S12 = 32'sb00000000000000000000000000001100
+	INIT_S13 = 32'sb00000000000000000000000000001101
+	INIT_S14 = 32'sb00000000000000000000000000001110
+	INIT_S15 = 32'sb00000000000000000000000000001111
+	INIT_S16 = 32'sb00000000000000000000000000010000
+	INIT_S17 = 32'sb00000000000000000000000000010001
+	INIT_S18 = 32'sb00000000000000000000000000010010
+	INIT_S19 = 32'sb00000000000000000000000000010011
+	INIT_S1e = 32'sb00000000000000000000000000101001
+	INIT_S2 = 32'sb00000000000000000000000000000010
+	INIT_S20 = 32'sb00000000000000000000000000010100
+	INIT_S21 = 32'sb00000000000000000000000000010101
+	INIT_S22 = 32'sb00000000000000000000000000010110
+	INIT_S23 = 32'sb00000000000000000000000000010111
+	INIT_S24 = 32'sb00000000000000000000000000011000
+	INIT_S3 = 32'sb00000000000000000000000000000011
+	INIT_S4 = 32'sb00000000000000000000000000000100
+	INIT_S5 = 32'sb00000000000000000000000000000101
+	INIT_S6 = 32'sb00000000000000000000000000000110
+	INIT_S7 = 32'sb00000000000000000000000000000111
+	INIT_S7e = 32'sb00000000000000000000000000101010
+	INIT_S8 = 32'sb00000000000000000000000000001000
+	INIT_S9 = 32'sb00000000000000000000000000001001
+	WAIT = 32'sb00000000000000000000000000011001
+	WR_CMD_S0 = 32'sb00000000000000000000000000011111
+	WR_CMD_S1 = 32'sb00000000000000000000000000100000
+	WR_CMD_S2 = 32'sb00000000000000000000000000100001
+	WR_CMD_S3 = 32'sb00000000000000000000000000100010
+	WR_CMD_S4 = 32'sb00000000000000000000000000100011
+	WR_DATA_S0 = 32'sb00000000000000000000000000100100
+	WR_DATA_S1 = 32'sb00000000000000000000000000100101
+	WR_DATA_S2 = 32'sb00000000000000000000000000100110
+	WR_DATA_S3 = 32'sb00000000000000000000000000100111
+	WR_DATA_S4 = 32'sb00000000000000000000000000101000
+Module <LCDDriver> is correct for synthesis.
+ 
+Analyzing module <Bin2BCD> in library <work>.
+Module <Bin2BCD> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <Display<128>> in unit <LCDDisplay> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<120>> in unit <LCDDisplay> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<118>> in unit <LCDDisplay> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<117>> in unit <LCDDisplay> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<112>> in unit <LCDDisplay> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<104>> in unit <LCDDisplay> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<96>> in unit <LCDDisplay> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<88>> in unit <LCDDisplay> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<86>> in unit <LCDDisplay> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<85>> in unit <LCDDisplay> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<80>> in unit <LCDDisplay> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<79>> in unit <LCDDisplay> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<78>> in unit <LCDDisplay> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<73>> in unit <LCDDisplay> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<72>> in unit <LCDDisplay> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<70>> in unit <LCDDisplay> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<64>> in unit <LCDDisplay> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<62>> in unit <LCDDisplay> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<61>> in unit <LCDDisplay> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<59>> in unit <LCDDisplay> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<58>> in unit <LCDDisplay> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<56>> in unit <LCDDisplay> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<49>> in unit <LCDDisplay> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<48>> in unit <LCDDisplay> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<45>> in unit <LCDDisplay> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<40>> in unit <LCDDisplay> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<37>> in unit <LCDDisplay> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<34>> in unit <LCDDisplay> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<32>> in unit <LCDDisplay> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<30>> in unit <LCDDisplay> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<28>> in unit <LCDDisplay> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<24>> in unit <LCDDisplay> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<22>> in unit <LCDDisplay> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<17>> in unit <LCDDisplay> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<16>> in unit <LCDDisplay> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<15>> in unit <LCDDisplay> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<14>> in unit <LCDDisplay> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<13>> in unit <LCDDisplay> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<9>> in unit <LCDDisplay> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<8>> in unit <LCDDisplay> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<7>> in unit <LCDDisplay> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<6>> in unit <LCDDisplay> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<5>> in unit <LCDDisplay> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Display<1>> in unit <LCDDisplay> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <LCD_RW> in unit <LCDDriver> has a constant value of 0 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <ClkDiv>.
+    Related source file is "ClkDiv.v".
+    Found 1-bit register for signal <ClkOut>.
+    Found 1-bit register for signal <ClkInt>.
+    Found 26-bit up counter for signal <DivCnt>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   2 D-type flip-flop(s).
+Unit <ClkDiv> synthesized.
+
+
+Synthesizing Unit <LCDClkDiv>.
+    Related source file is "LCDClkDiv.v".
+    Found 1-bit register for signal <ClkOut>.
+    Found 1-bit register for signal <ClkInt>.
+    Found 25-bit up counter for signal <DivCnt>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   2 D-type flip-flop(s).
+Unit <LCDClkDiv> synthesized.
+
+
+Synthesizing Unit <ReactionTimer>.
+    Related source file is "ReactionTimer.v".
+    Found 1-bit register for signal <Wait>.
+    Found 1-bit register for signal <Slow>.
+    Found 10-bit register for signal <ReactionTime>.
+    Found 1-bit register for signal <Cheat>.
+    Found 1-bit register for signal <LCDUpdate>.
+    Found 8-bit register for signal <LED>.
+    Found 13-bit adder carry out for signal <add0000$addsub0000> created at line 139.
+    Found 13-bit register for signal <counter>.
+    Found 13-bit adder for signal <counter$addsub0000> created at line 151.
+    Found 32-bit register for signal <Debounce>.
+    Found 32-bit 4-to-1 multiplexer for signal <Debounce$mux0000> created at line 54.
+    Found 32-bit 4-to-1 multiplexer for signal <Debounce$mux0001>.
+    Found 10-bit register for signal <delay>.
+    Found 10-bit adder for signal <delay$addsub0000> created at line 186.
+    Found 13-bit comparator equal for signal <LED$cmp_eq0000> created at line 129.
+    Found 13-bit register for signal <RandomPlace>.
+    Found 10-bit subtractor for signal <ReactionTime$addsub0000> created at line 145.
+    Found 14-bit comparator greater for signal <ReactionTime$cmp_gt0000> created at line 139.
+    Found 13-bit comparator less for signal <ReactionTime$cmp_lt0000> created at line 133.
+    Found 14-bit comparator less for signal <ReactionTime$cmp_lt0001> created at line 143.
+    Found 4-bit register for signal <State>.
+    Summary:
+	inferred  94 D-type flip-flop(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+	inferred  64 Multiplexer(s).
+Unit <ReactionTimer> synthesized.
+
+
+Synthesizing Unit <RandomGen>.
+    Related source file is "RandomGen.v".
+    Found 12-bit register for signal <RandomValue>.
+    Found 12-bit adder for signal <RandomValue$addsub0000> created at line 23.
+    Found 12-bit comparator greater for signal <RandomValue$cmp_gt0000> created at line 24.
+    Summary:
+	inferred  12 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <RandomGen> synthesized.
+
+
+Synthesizing Unit <Bin2BCD>.
+    Related source file is "Bin2BCD.v".
+WARNING:Xst:646 - Signal <Temp> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 4-bit adder for signal <$add0000> created at line 21.
+    Found 4-bit adder for signal <$add0001> created at line 21.
+    Found 4-bit adder for signal <$add0002> created at line 21.
+    Found 4-bit adder for signal <$add0003> created at line 21.
+    Found 4-bit adder for signal <$add0004> created at line 23.
+    Found 4-bit adder for signal <$add0005> created at line 21.
+    Found 4-bit adder for signal <$add0006> created at line 23.
+    Found 4-bit adder for signal <$add0007> created at line 21.
+    Found 4-bit adder for signal <$add0008> created at line 23.
+    Found 4-bit adder for signal <$add0009> created at line 21.
+    Found 4-bit adder for signal <$add0010> created at line 23.
+    Found 4-bit adder for signal <$add0011> created at line 25.
+    Found 4-bit comparator greater for signal <Temp$cmp_gt0000> created at line 20.
+    Found 4-bit comparator greater for signal <Temp$cmp_gt0001> created at line 20.
+    Found 4-bit comparator greater for signal <Temp$cmp_gt0002> created at line 20.
+    Found 4-bit comparator greater for signal <Temp$cmp_gt0003> created at line 22.
+    Found 4-bit comparator greater for signal <Temp$cmp_gt0004> created at line 20.
+    Found 4-bit comparator greater for signal <Temp$cmp_gt0005> created at line 22.
+    Found 4-bit comparator greater for signal <Temp$cmp_gt0006> created at line 20.
+    Found 4-bit comparator greater for signal <Temp$cmp_gt0007> created at line 22.
+    Found 4-bit comparator greater for signal <Temp$cmp_gt0008> created at line 20.
+    Found 4-bit comparator greater for signal <Temp$cmp_gt0009> created at line 24.
+    Found 4-bit comparator greater for signal <Temp$cmp_gt0010> created at line 22.
+    Found 4-bit comparator greater for signal <Temp$cmp_gt0011> created at line 20.
+    Summary:
+	inferred  12 Adder/Subtractor(s).
+	inferred  12 Comparator(s).
+Unit <Bin2BCD> synthesized.
+
+
+Synthesizing Unit <LCDCntrl>.
+    Related source file is "LCDInterface.v".
+    Found 8-bit register for signal <DataValue>.
+    Found 1-bit register for signal <Command>.
+    Found 1-bit register for signal <Write>.
+    Found 5-bit register for signal <CharsDisplayed>.
+    Found 5-bit adder for signal <CharsDisplayed$addsub0000> created at line 134.
+    Found 128-bit register for signal <DisplayInt>.
+    Found 4-bit register for signal <State>.
+    Summary:
+	inferred 147 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <LCDCntrl> synthesized.
+
+
+Synthesizing Unit <LCDDriver>.
+    Related source file is "LCDInterface.v".
+    Found 4-bit register for signal <LCD_Data>.
+    Found 1-bit register for signal <LCD_E>.
+    Found 1-bit register for signal <Busy>.
+    Found 1-bit register for signal <LCD_RS>.
+    Found 1-bit register for signal <Ready>.
+    Found 9-bit register for signal <Counter>.
+    Found 9-bit adder for signal <Counter$addsub0000>.
+    Found 6-bit register for signal <State>.
+    Summary:
+	inferred  23 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <LCDDriver> synthesized.
+
+
+Synthesizing Unit <LCDInterface>.
+    Related source file is "LCDInterface.v".
+WARNING:Xst:1780 - Signal <LCD_Clk> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+Unit <LCDInterface> synthesized.
+
+
+Synthesizing Unit <LCDDisplay>.
+    Related source file is "LCDDisplay.v".
+WARNING:Xst:646 - Signal <BCD<15:12>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Register <Display<122>> equivalent to <Display<103>> has been removed
+    Register <Display<41>> equivalent to <Display<103>> has been removed
+    Register <Display<47>> equivalent to <Display<103>> has been removed
+    Register <Display<51>> equivalent to <Display<103>> has been removed
+    Register <Display<55>> equivalent to <Display<103>> has been removed
+    Register <Display<11>> equivalent to <Display<10>> has been removed
+    Register <Display<121>> equivalent to <Display<10>> has been removed
+    Register <Display<12>> equivalent to <Display<10>> has been removed
+    Register <Display<19>> equivalent to <Display<10>> has been removed
+    Register <Display<20>> equivalent to <Display<10>> has been removed
+    Register <Display<26>> equivalent to <Display<10>> has been removed
+    Register <Display<29>> equivalent to <Display<10>> has been removed
+    Register <Display<2>> equivalent to <Display<10>> has been removed
+    Register <Display<3>> equivalent to <Display<10>> has been removed
+    Register <Display<4>> equivalent to <Display<10>> has been removed
+    Register <Display<82>> equivalent to <Display<10>> has been removed
+    Register <Display<66>> equivalent to <Display<111>> has been removed
+    Register <Display<75>> equivalent to <Display<111>> has been removed
+    Register <Display<76>> equivalent to <Display<111>> has been removed
+    Register <Display<119>> equivalent to <Display<113>> has been removed
+    Register <Display<127>> equivalent to <Display<113>> has been removed
+    Register <Display<71>> equivalent to <Display<113>> has been removed
+    Register <Display<87>> equivalent to <Display<113>> has been removed
+    Register <Display<116>> equivalent to <Display<114>> has been removed
+    Register <Display<54>> equivalent to <Display<114>> has been removed
+    Register <Display<38>> equivalent to <Display<115>> has been removed
+    Register <Display<46>> equivalent to <Display<115>> has been removed
+    Register <Display<69>> equivalent to <Display<123>> has been removed
+    Register <Display<83>> equivalent to <Display<123>> has been removed
+    Register <Display<42>> equivalent to <Display<124>> has been removed
+    Register <Display<50>> equivalent to <Display<124>> has been removed
+    Register <Display<60>> equivalent to <Display<124>> has been removed
+    Register <Display<63>> equivalent to <Display<124>> has been removed
+    Register <Display<74>> equivalent to <Display<125>> has been removed
+    Register <Display<77>> equivalent to <Display<126>> has been removed
+    Register <Display<25>> equivalent to <Display<18>> has been removed
+    Register <Display<31>> equivalent to <Display<18>> has been removed
+    Register <Display<35>> equivalent to <Display<18>> has been removed
+    Register <Display<39>> equivalent to <Display<18>> has been removed
+    Register <Display<23>> equivalent to <Display<21>> has been removed
+    Register <Display<27>> equivalent to <Display<21>> has been removed
+    Register <Display<36>> equivalent to <Display<21>> has been removed
+    Register <Display<44>> equivalent to <Display<21>> has been removed
+    Register <Display<53>> equivalent to <Display<21>> has been removed
+    Register <Display<68>> equivalent to <Display<21>> has been removed
+    Register <Display<81>> equivalent to <Display<33>> has been removed
+    Register <Display<52>> equivalent to <Display<43>> has been removed
+    Register <Display<95>> equivalent to <Display<67>> has been removed
+    Found finite state machine <FSM_0> for signal <State>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 12                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 7                                              |
+    | Clock              | Clk                       (rising_edge)        |
+    | Reset              | Rst                       (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 0000                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <LCDAck>.
+    Found 4-bit register for signal <Display<126:123>>.
+    Found 3-bit register for signal <Display<115:113>>.
+    Found 7-bit register for signal <Display<111:105>>.
+    Found 7-bit register for signal <Display<103:97>>.
+    Found 6-bit register for signal <Display<94:89>>.
+    Found 1-bit register for signal <Display<84>>.
+    Found 1-bit register for signal <Display<67>>.
+    Found 1-bit register for signal <Display<65>>.
+    Found 1-bit register for signal <Display<57>>.
+    Found 1-bit register for signal <Display<43>>.
+    Found 1-bit register for signal <Display<33>>.
+    Found 1-bit register for signal <Display<21>>.
+    Found 1-bit register for signal <Display<18>>.
+    Found 1-bit register for signal <Display<10>>.
+    Found 6-bit adder for signal <Display_104_97$add0000> created at line 95.
+    Found 6-bit adder for signal <Display_112_105$add0000> created at line 94.
+    Found 6-bit adder for signal <Display_96_89$add0000> created at line 96.
+    Found 1-bit register for signal <GO>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  38 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+Unit <LCDDisplay> synthesized.
+
+
+Synthesizing Unit <Top_Mod>.
+    Related source file is "Top_Mod.v".
+Unit <Top_Mod> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 22
+ 10-bit adder                                          : 1
+ 10-bit subtractor                                     : 1
+ 12-bit adder                                          : 1
+ 13-bit adder                                          : 1
+ 13-bit adder carry out                                : 1
+ 4-bit adder                                           : 12
+ 5-bit adder                                           : 1
+ 6-bit adder                                           : 3
+ 9-bit adder                                           : 1
+# Counters                                             : 2
+ 25-bit up counter                                     : 1
+ 26-bit up counter                                     : 1
+# Registers                                            : 67
+ 1-bit register                                        : 52
+ 10-bit register                                       : 2
+ 12-bit register                                       : 1
+ 128-bit register                                      : 1
+ 13-bit register                                       : 2
+ 32-bit register                                       : 1
+ 4-bit register                                        : 3
+ 5-bit register                                        : 1
+ 6-bit register                                        : 1
+ 8-bit register                                        : 2
+ 9-bit register                                        : 1
+# Comparators                                          : 17
+ 12-bit comparator greater                             : 1
+ 13-bit comparator equal                               : 1
+ 13-bit comparator less                                : 1
+ 14-bit comparator greater                             : 1
+ 14-bit comparator less                                : 1
+ 4-bit comparator greater                              : 12
+# Multiplexers                                         : 2
+ 32-bit 4-to-1 multiplexer                             : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <LCDDisplay_0/State/FSM> on signal <State[1:3]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 000
+ 0001  | 001
+ 0010  | 111
+ 0011  | 101
+ 0100  | 011
+ 0101  | 010
+ 0110  | 110
+-------------------
+WARNING:Xst:1710 - FF/Latch <DisplayInt_128> (without init value) has a constant value of 0 in block <LCDCntrl_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DisplayInt_120> (without init value) has a constant value of 0 in block <LCDCntrl_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DisplayInt_112> (without init value) has a constant value of 0 in block <LCDCntrl_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DisplayInt_104> (without init value) has a constant value of 0 in block <LCDCntrl_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DisplayInt_96> (without init value) has a constant value of 0 in block <LCDCntrl_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DisplayInt_88> (without init value) has a constant value of 0 in block <LCDCntrl_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DisplayInt_80> (without init value) has a constant value of 0 in block <LCDCntrl_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DisplayInt_72> (without init value) has a constant value of 0 in block <LCDCntrl_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DisplayInt_64> (without init value) has a constant value of 0 in block <LCDCntrl_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DisplayInt_56> (without init value) has a constant value of 0 in block <LCDCntrl_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DisplayInt_48> (without init value) has a constant value of 0 in block <LCDCntrl_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DisplayInt_40> (without init value) has a constant value of 0 in block <LCDCntrl_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DisplayInt_32> (without init value) has a constant value of 0 in block <LCDCntrl_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DisplayInt_24> (without init value) has a constant value of 0 in block <LCDCntrl_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DisplayInt_17> (without init value) has a constant value of 0 in block <LCDCntrl_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DisplayInt_16> (without init value) has a constant value of 0 in block <LCDCntrl_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DisplayInt_15> (without init value) has a constant value of 0 in block <LCDCntrl_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DisplayInt_13> (without init value) has a constant value of 0 in block <LCDCntrl_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DisplayInt_9> (without init value) has a constant value of 0 in block <LCDCntrl_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DisplayInt_8> (without init value) has a constant value of 0 in block <LCDCntrl_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DisplayInt_7> (without init value) has a constant value of 0 in block <LCDCntrl_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DisplayInt_5> (without init value) has a constant value of 0 in block <LCDCntrl_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DisplayInt_1> (without init value) has a constant value of 0 in block <LCDCntrl_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RandomPlace_12> has a constant value of 0 in block <ReactionTimer_0>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Adders/Subtractors                                   : 22
+ 10-bit adder                                          : 1
+ 10-bit subtractor                                     : 1
+ 12-bit adder                                          : 1
+ 13-bit adder                                          : 1
+ 13-bit adder carry out                                : 1
+ 4-bit adder                                           : 12
+ 5-bit adder                                           : 1
+ 6-bit adder                                           : 3
+ 9-bit adder                                           : 1
+# Counters                                             : 2
+ 25-bit up counter                                     : 1
+ 26-bit up counter                                     : 1
+# Registers                                            : 318
+ Flip-Flops                                            : 318
+# Comparators                                          : 17
+ 12-bit comparator greater                             : 1
+ 13-bit comparator equal                               : 1
+ 13-bit comparator less                                : 1
+ 14-bit comparator greater                             : 1
+ 14-bit comparator less                                : 1
+ 4-bit comparator greater                              : 12
+# Multiplexers                                         : 2
+ 32-bit 4-to-1 multiplexer                             : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <RandomPlace_12> has a constant value of 0 in block <ReactionTimer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DisplayInt_128> (without init value) has a constant value of 0 in block <LCDCntrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DisplayInt_120> (without init value) has a constant value of 0 in block <LCDCntrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DisplayInt_112> (without init value) has a constant value of 0 in block <LCDCntrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DisplayInt_104> (without init value) has a constant value of 0 in block <LCDCntrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DisplayInt_96> (without init value) has a constant value of 0 in block <LCDCntrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DisplayInt_88> (without init value) has a constant value of 0 in block <LCDCntrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DisplayInt_80> (without init value) has a constant value of 0 in block <LCDCntrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DisplayInt_72> (without init value) has a constant value of 0 in block <LCDCntrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DisplayInt_64> (without init value) has a constant value of 0 in block <LCDCntrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DisplayInt_56> (without init value) has a constant value of 0 in block <LCDCntrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DisplayInt_48> (without init value) has a constant value of 0 in block <LCDCntrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DisplayInt_40> (without init value) has a constant value of 0 in block <LCDCntrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DisplayInt_32> (without init value) has a constant value of 0 in block <LCDCntrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DisplayInt_24> (without init value) has a constant value of 0 in block <LCDCntrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DisplayInt_17> (without init value) has a constant value of 0 in block <LCDCntrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DisplayInt_16> (without init value) has a constant value of 0 in block <LCDCntrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DisplayInt_15> (without init value) has a constant value of 0 in block <LCDCntrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DisplayInt_13> (without init value) has a constant value of 0 in block <LCDCntrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DisplayInt_9> (without init value) has a constant value of 0 in block <LCDCntrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DisplayInt_8> (without init value) has a constant value of 0 in block <LCDCntrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DisplayInt_7> (without init value) has a constant value of 0 in block <LCDCntrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DisplayInt_5> (without init value) has a constant value of 0 in block <LCDCntrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DisplayInt_1> (without init value) has a constant value of 0 in block <LCDCntrl>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <DataValue_7> in Unit <LCDCntrl> is equivalent to the following FF/Latch, which will be removed : <Command> 
+WARNING:Xst:2677 - Node <Debounce_4> of sequential type is unconnected in block <ReactionTimer>.
+WARNING:Xst:2677 - Node <Debounce_5> of sequential type is unconnected in block <ReactionTimer>.
+WARNING:Xst:2677 - Node <Debounce_6> of sequential type is unconnected in block <ReactionTimer>.
+WARNING:Xst:2677 - Node <Debounce_7> of sequential type is unconnected in block <ReactionTimer>.
+WARNING:Xst:2677 - Node <Debounce_8> of sequential type is unconnected in block <ReactionTimer>.
+WARNING:Xst:2677 - Node <Debounce_9> of sequential type is unconnected in block <ReactionTimer>.
+WARNING:Xst:2677 - Node <Debounce_10> of sequential type is unconnected in block <ReactionTimer>.
+WARNING:Xst:2677 - Node <Debounce_11> of sequential type is unconnected in block <ReactionTimer>.
+WARNING:Xst:2677 - Node <Debounce_12> of sequential type is unconnected in block <ReactionTimer>.
+WARNING:Xst:2677 - Node <Debounce_13> of sequential type is unconnected in block <ReactionTimer>.
+WARNING:Xst:2677 - Node <Debounce_14> of sequential type is unconnected in block <ReactionTimer>.
+WARNING:Xst:2677 - Node <Debounce_15> of sequential type is unconnected in block <ReactionTimer>.
+WARNING:Xst:2677 - Node <Debounce_16> of sequential type is unconnected in block <ReactionTimer>.
+WARNING:Xst:2677 - Node <Debounce_17> of sequential type is unconnected in block <ReactionTimer>.
+WARNING:Xst:2677 - Node <Debounce_18> of sequential type is unconnected in block <ReactionTimer>.
+WARNING:Xst:2677 - Node <Debounce_19> of sequential type is unconnected in block <ReactionTimer>.
+WARNING:Xst:2677 - Node <Debounce_20> of sequential type is unconnected in block <ReactionTimer>.
+WARNING:Xst:2677 - Node <Debounce_21> of sequential type is unconnected in block <ReactionTimer>.
+WARNING:Xst:2677 - Node <Debounce_22> of sequential type is unconnected in block <ReactionTimer>.
+WARNING:Xst:2677 - Node <Debounce_23> of sequential type is unconnected in block <ReactionTimer>.
+WARNING:Xst:2677 - Node <Debounce_24> of sequential type is unconnected in block <ReactionTimer>.
+WARNING:Xst:2677 - Node <Debounce_25> of sequential type is unconnected in block <ReactionTimer>.
+WARNING:Xst:2677 - Node <Debounce_26> of sequential type is unconnected in block <ReactionTimer>.
+WARNING:Xst:2677 - Node <Debounce_27> of sequential type is unconnected in block <ReactionTimer>.
+WARNING:Xst:2677 - Node <Debounce_28> of sequential type is unconnected in block <ReactionTimer>.
+WARNING:Xst:2677 - Node <Debounce_29> of sequential type is unconnected in block <ReactionTimer>.
+WARNING:Xst:2677 - Node <Debounce_30> of sequential type is unconnected in block <ReactionTimer>.
+WARNING:Xst:2677 - Node <Debounce_31> of sequential type is unconnected in block <ReactionTimer>.
+WARNING:Xst:1710 - FF/Latch <RandomValue_0> (without init value) has a constant value of 0 in block <RandomGen>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <Top_Mod> ...
+
+Optimizing unit <ReactionTimer> ...
+WARNING:Xst:1293 - FF/Latch <State_3> has a constant value of 0 in block <ReactionTimer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Debounce_3> has a constant value of 0 in block <ReactionTimer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <State_3> has a constant value of 0 in block <ReactionTimer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Debounce_3> has a constant value of 0 in block <ReactionTimer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <State_3> has a constant value of 0 in block <ReactionTimer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Debounce_3> has a constant value of 0 in block <ReactionTimer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <State_3> has a constant value of 0 in block <ReactionTimer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Debounce_3> has a constant value of 0 in block <ReactionTimer>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <RandomGen> ...
+
+Optimizing unit <Bin2BCD> ...
+
+Optimizing unit <LCDCntrl> ...
+
+Optimizing unit <LCDDriver> ...
+
+Optimizing unit <LCDDisplay> ...
+WARNING:Xst:1710 - FF/Latch <Display_110> (without init value) has a constant value of 1 in block <LCDDisplay>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ReactionTimer_0/RandomPlace_0> has a constant value of 0 in block <Top_Mod>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Top_Mod, actual ratio is 9.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 314
+ Flip-Flops                                            : 314
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Top_Mod.ngr
+Top Level Output File Name         : Top_Mod
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 19
+
+Cell Usage :
+# BELS                             : 1071
+#      GND                         : 1
+#      INV                         : 33
+#      LUT1                        : 95
+#      LUT2                        : 150
+#      LUT2_D                      : 4
+#      LUT2_L                      : 2
+#      LUT3                        : 41
+#      LUT3_D                      : 6
+#      LUT3_L                      : 3
+#      LUT4                        : 378
+#      LUT4_D                      : 15
+#      LUT4_L                      : 15
+#      MUXCY                       : 177
+#      MUXF5                       : 35
+#      MUXF6                       : 1
+#      VCC                         : 1
+#      XORCY                       : 114
+# FlipFlops/Latches                : 314
+#      FD                          : 45
+#      FDE                         : 11
+#      FDR                         : 109
+#      FDRE                        : 2
+#      FDRS                        : 118
+#      FDS                         : 29
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 18
+#      IBUF                        : 3
+#      OBUF                        : 15
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                      406  out of   4656     8%  
+ Number of Slice Flip Flops:            314  out of   9312     3%  
+ Number of 4 input LUTs:                742  out of   9312     7%  
+ Number of IOs:                          19
+ Number of bonded IOBs:                  19  out of    232     8%  
+ Number of GCLKs:                         3  out of     24    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clk                                | BUFGP                  | 55    |
+ClkDiv_0/ClkOut1                   | BUFG                   | 73    |
+LCDClkDiv_0/ClkOut1                | BUFG                   | 186   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 8.015ns (Maximum Frequency: 124.760MHz)
+   Minimum input arrival time before clock: 6.420ns
+   Maximum output required time after clock: 4.182ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clk'
+  Clock period: 5.607ns (frequency: 178.362MHz)
+  Total number of paths / destination ports: 2083 / 108
+-------------------------------------------------------------------------
+Delay:               5.607ns (Levels of Logic = 9)
+  Source:            ClkDiv_0/DivCnt_5 (FF)
+  Destination:       ClkDiv_0/DivCnt_0 (FF)
+  Source Clock:      Clk rising
+  Destination Clock: Clk rising
+
+  Data Path: ClkDiv_0/DivCnt_5 to ClkDiv_0/DivCnt_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.514   0.532  ClkDiv_0/DivCnt_5 (ClkDiv_0/DivCnt_5)
+     LUT2:I0->O            1   0.612   0.000  ClkDiv_0/ClkInt_cmp_eq0000_wg_lut<0> (ClkDiv_0/ClkInt_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  ClkDiv_0/ClkInt_cmp_eq0000_wg_cy<0> (ClkDiv_0/ClkInt_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  ClkDiv_0/ClkInt_cmp_eq0000_wg_cy<1> (ClkDiv_0/ClkInt_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  ClkDiv_0/ClkInt_cmp_eq0000_wg_cy<2> (ClkDiv_0/ClkInt_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  ClkDiv_0/ClkInt_cmp_eq0000_wg_cy<3> (ClkDiv_0/ClkInt_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  ClkDiv_0/ClkInt_cmp_eq0000_wg_cy<4> (ClkDiv_0/ClkInt_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  ClkDiv_0/ClkInt_cmp_eq0000_wg_cy<5> (ClkDiv_0/ClkInt_cmp_eq0000_wg_cy<5>)
+     MUXCY:CI->O           3   0.289   0.520  ClkDiv_0/ClkInt_cmp_eq0000_wg_cy<6> (ClkDiv_0/ClkInt_cmp_eq0000)
+     LUT2:I1->O           26   0.612   1.071  ClkDiv_0/DivCnt_or00001 (ClkDiv_0/DivCnt_or0000)
+     FDR:R                     0.795          ClkDiv_0/DivCnt_0
+    ----------------------------------------
+    Total                      5.607ns (3.483ns logic, 2.124ns route)
+                                       (62.1% logic, 37.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ClkDiv_0/ClkOut1'
+  Clock period: 8.015ns (frequency: 124.760MHz)
+  Total number of paths / destination ports: 6870 / 95
+-------------------------------------------------------------------------
+Delay:               8.015ns (Levels of Logic = 15)
+  Source:            ReactionTimer_0/RandomPlace_3 (FF)
+  Destination:       ReactionTimer_0/ReactionTime_9 (FF)
+  Source Clock:      ClkDiv_0/ClkOut1 rising
+  Destination Clock: ClkDiv_0/ClkOut1 rising
+
+  Data Path: ReactionTimer_0/RandomPlace_3 to ReactionTimer_0/ReactionTime_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              4   0.514   0.651  ReactionTimer_0/RandomPlace_3 (ReactionTimer_0/RandomPlace_3)
+     LUT1:I0->O            1   0.612   0.000  ReactionTimer_0/Madd_add0000_addsub0000_cy<3>_rt (ReactionTimer_0/Madd_add0000_addsub0000_cy<3>_rt)
+     MUXCY:S->O            1   0.404   0.000  ReactionTimer_0/Madd_add0000_addsub0000_cy<3> (ReactionTimer_0/Madd_add0000_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  ReactionTimer_0/Madd_add0000_addsub0000_cy<4> (ReactionTimer_0/Madd_add0000_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  ReactionTimer_0/Madd_add0000_addsub0000_cy<5> (ReactionTimer_0/Madd_add0000_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  ReactionTimer_0/Madd_add0000_addsub0000_cy<6> (ReactionTimer_0/Madd_add0000_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.051   0.000  ReactionTimer_0/Madd_add0000_addsub0000_cy<7> (ReactionTimer_0/Madd_add0000_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.051   0.000  ReactionTimer_0/Madd_add0000_addsub0000_cy<8> (ReactionTimer_0/Madd_add0000_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.051   0.000  ReactionTimer_0/Madd_add0000_addsub0000_cy<9> (ReactionTimer_0/Madd_add0000_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.051   0.000  ReactionTimer_0/Madd_add0000_addsub0000_cy<10> (ReactionTimer_0/Madd_add0000_addsub0000_cy<10>)
+     XORCY:CI->O           2   0.699   0.449  ReactionTimer_0/Madd_add0000_addsub0000_xor<11> (ReactionTimer_0/add0000_addsub0000<11>)
+     LUT2:I1->O            1   0.612   0.000  ReactionTimer_0/Mcompar_ReactionTime_cmp_lt0001_lut<11> (ReactionTimer_0/Mcompar_ReactionTime_cmp_lt0001_lut<11>)
+     MUXCY:S->O            1   0.404   0.000  ReactionTimer_0/Mcompar_ReactionTime_cmp_lt0001_cy<11> (ReactionTimer_0/Mcompar_ReactionTime_cmp_lt0001_cy<11>)
+     MUXCY:CI->O           6   0.399   0.599  ReactionTimer_0/Mcompar_ReactionTime_cmp_lt0001_cy<12> (ReactionTimer_0/Mcompar_ReactionTime_cmp_lt0001_cy<12>)
+     LUT3:I2->O           12   0.612   0.820  ReactionTimer_0/ReactionTime_mux0000<0>21 (ReactionTimer_0/N27)
+     LUT4:I3->O            1   0.612   0.000  ReactionTimer_0/ReactionTime_mux0000<9>1 (ReactionTimer_0/ReactionTime_mux0000<9>)
+     FD:D                      0.268          ReactionTimer_0/ReactionTime_0
+    ----------------------------------------
+    Total                      8.015ns (5.497ns logic, 2.518ns route)
+                                       (68.6% logic, 31.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'LCDClkDiv_0/ClkOut1'
+  Clock period: 6.660ns (frequency: 150.154MHz)
+  Total number of paths / destination ports: 4802 / 302
+-------------------------------------------------------------------------
+Delay:               6.660ns (Levels of Logic = 5)
+  Source:            LCDDisplay_0/LcdInterface_0/LCDDriver_0/State_1 (FF)
+  Destination:       LCDDisplay_0/LcdInterface_0/LCDDriver_0/Counter_1 (FF)
+  Source Clock:      LCDClkDiv_0/ClkOut1 rising
+  Destination Clock: LCDClkDiv_0/ClkOut1 rising
+
+  Data Path: LCDDisplay_0/LcdInterface_0/LCDDriver_0/State_1 to LCDDisplay_0/LcdInterface_0/LCDDriver_0/Counter_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRS:C->Q            40   0.514   1.227  LCDDisplay_0/LcdInterface_0/LCDDriver_0/State_1 (LCDDisplay_0/LcdInterface_0/LCDDriver_0/State_1)
+     LUT2_L:I0->LO         1   0.612   0.103  LCDDisplay_0/LcdInterface_0/LCDDriver_0/State_mux0000<5>51 (LCDDisplay_0/LcdInterface_0/LCDDriver_0/N25)
+     LUT4:I3->O            3   0.612   0.454  LCDDisplay_0/LcdInterface_0/LCDDriver_0/LCD_Data_mux0000<2>161 (LCDDisplay_0/LcdInterface_0/LCDDriver_0/N65)
+     LUT4:I3->O            1   0.612   0.387  LCDDisplay_0/LcdInterface_0/LCDDriver_0/Counter_mux0000<0>214 (LCDDisplay_0/LcdInterface_0/LCDDriver_0/Counter_mux0000<0>214)
+     LUT3_D:I2->O          8   0.612   0.646  LCDDisplay_0/LcdInterface_0/LCDDriver_0/Counter_mux0000<0>267 (LCDDisplay_0/LcdInterface_0/LCDDriver_0/N12)
+     LUT4:I3->O            1   0.612   0.000  LCDDisplay_0/LcdInterface_0/LCDDriver_0/Counter_mux0000<7>1 (LCDDisplay_0/LcdInterface_0/LCDDriver_0/Counter_mux0000<7>)
+     FDR:D                     0.268          LCDDisplay_0/LcdInterface_0/LCDDriver_0/Counter_1
+    ----------------------------------------
+    Total                      6.660ns (3.842ns logic, 2.818ns route)
+                                       (57.7% logic, 42.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
+  Total number of paths / destination ports: 55 / 55
+-------------------------------------------------------------------------
+Offset:              4.305ns (Levels of Logic = 2)
+  Source:            DivRst (PAD)
+  Destination:       ClkDiv_0/DivCnt_0 (FF)
+  Destination Clock: Clk rising
+
+  Data Path: DivRst to ClkDiv_0/DivCnt_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   1.106   0.721  DivRst_IBUF (DivRst_IBUF)
+     LUT2:I0->O           25   0.612   1.071  LCDClkDiv_0/DivCnt_or00001 (LCDClkDiv_0/DivCnt_or0000)
+     FDR:R                     0.795          LCDClkDiv_0/DivCnt_0
+    ----------------------------------------
+    Total                      4.305ns (2.513ns logic, 1.792ns route)
+                                       (58.4% logic, 41.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'ClkDiv_0/ClkOut1'
+  Total number of paths / destination ports: 149 / 43
+-------------------------------------------------------------------------
+Offset:              6.420ns (Levels of Logic = 5)
+  Source:            Start (PAD)
+  Destination:       ReactionTimer_0/delay_9 (FF)
+  Destination Clock: ClkDiv_0/ClkOut1 rising
+
+  Data Path: Start to ReactionTimer_0/delay_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            20   1.106   1.089  Start_IBUF (Start_IBUF)
+     LUT4:I0->O            2   0.612   0.383  ReactionTimer_0/delay_mux0000<0>316 (ReactionTimer_0/delay_mux0000<0>316)
+     LUT4:I3->O            1   0.612   0.426  ReactionTimer_0/delay_mux0000<0>347_SW1 (N215)
+     LUT4_D:I1->O          9   0.612   0.700  ReactionTimer_0/delay_mux0000<0>363 (ReactionTimer_0/N29)
+     LUT4:I3->O            1   0.612   0.000  ReactionTimer_0/delay_mux0000<8>1 (ReactionTimer_0/delay_mux0000<8>)
+     FD:D                      0.268          ReactionTimer_0/delay_1
+    ----------------------------------------
+    Total                      6.420ns (3.822ns logic, 2.598ns route)
+                                       (59.5% logic, 40.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'LCDClkDiv_0/ClkOut1'
+  Total number of paths / destination ports: 186 / 186
+-------------------------------------------------------------------------
+Offset:              4.964ns (Levels of Logic = 3)
+  Source:            Rst (PAD)
+  Destination:       LCDDisplay_0/LcdInterface_0/LCDDriver_0/Ready (FF)
+  Destination Clock: LCDClkDiv_0/ClkOut1 rising
+
+  Data Path: Rst to LCDDisplay_0/LcdInterface_0/LCDDriver_0/Ready
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           205   1.106   1.122  Rst_IBUF (Rst_IBUF)
+     LUT4:I3->O            1   0.612   0.360  LCDDisplay_0/LcdInterface_0/LCDDriver_0/Ready_or0000_SW0 (N9)
+     LUT4:I3->O            1   0.612   0.357  LCDDisplay_0/LcdInterface_0/LCDDriver_0/Ready_or0000 (LCDDisplay_0/LcdInterface_0/LCDDriver_0/Ready_or0000)
+     FDR:R                     0.795          LCDDisplay_0/LcdInterface_0/LCDDriver_0/Ready
+    ----------------------------------------
+    Total                      4.964ns (3.125ns logic, 1.839ns route)
+                                       (62.9% logic, 37.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'LCDClkDiv_0/ClkOut1'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              4.040ns (Levels of Logic = 1)
+  Source:            LCDDisplay_0/LcdInterface_0/LCDDriver_0/LCD_E (FF)
+  Destination:       LCD_E (PAD)
+  Source Clock:      LCDClkDiv_0/ClkOut1 rising
+
+  Data Path: LCDDisplay_0/LcdInterface_0/LCDDriver_0/LCD_E to LCD_E
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRS:C->Q             1   0.514   0.357  LCDDisplay_0/LcdInterface_0/LCDDriver_0/LCD_E (LCDDisplay_0/LcdInterface_0/LCDDriver_0/LCD_E)
+     OBUF:I->O                 3.169          LCD_E_OBUF (LCD_E)
+    ----------------------------------------
+    Total                      4.040ns (3.683ns logic, 0.357ns route)
+                                       (91.2% logic, 8.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'ClkDiv_0/ClkOut1'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              4.182ns (Levels of Logic = 1)
+  Source:            ReactionTimer_0/LED_7 (FF)
+  Destination:       LED<7> (PAD)
+  Source Clock:      ClkDiv_0/ClkOut1 rising
+
+  Data Path: ReactionTimer_0/LED_7 to LED<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               4   0.514   0.499  ReactionTimer_0/LED_7 (ReactionTimer_0/LED_7)
+     OBUF:I->O                 3.169          LED_7_OBUF (LED<7>)
+    ----------------------------------------
+    Total                      4.182ns (3.683ns logic, 0.499ns route)
+                                       (88.1% logic, 11.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 12.74 secs
+ 
+--> 
+
+Total memory usage is 274572 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   92 (   0 filtered)
+Number of infos    :   47 (   0 filtered)
+

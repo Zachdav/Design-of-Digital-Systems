@@ -1,0 +1,27 @@
+xst -intstyle ise -ifn "G:/Digital/AND2gate/and2gate.xst" -ofn "G:/Digital/AND2gate/and2gate.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc and2gate.ucf -p xc3s500e-fg320-4 and2gate.ngc and2gate.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o and2gate_map.ncd and2gate.ngd and2gate.pcf 
+par -w -intstyle ise -ol high -t 1 and2gate_map.ncd and2gate.ncd and2gate.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml and2gate.twx and2gate.ncd -o and2gate.twr and2gate.pcf -ucf and2gate.ucf 
+bitgen -intstyle ise -f and2gate.ut and2gate.ncd 
+xst -intstyle ise -ifn "G:/Digital/AND2gate/and2gate.xst" -ofn "G:/Digital/AND2gate/and2gate.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc and2gate.ucf -uc or2gate.ucf -p xc3s500e-fg320-4 and2gate.ngc and2gate.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o and2gate_map.ncd and2gate.ngd and2gate.pcf 
+par -w -intstyle ise -ol high -t 1 and2gate_map.ncd and2gate.ncd and2gate.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml and2gate.twx and2gate.ncd -o and2gate.twr and2gate.pcf -ucf and2gate.ucf -ucf or2gate.ucf 
+xst -intstyle ise -ifn "G:/Digital/AND2gate/and2gate.xst" -ofn "G:/Digital/AND2gate/and2gate.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 and2gate.ngc and2gate.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o and2gate_map.ncd and2gate.ngd and2gate.pcf 
+par -w -intstyle ise -ol high -t 1 and2gate_map.ncd and2gate.ncd and2gate.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml and2gate.twx and2gate.ncd -o and2gate.twr and2gate.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 and2gate.ngc and2gate.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o and2gate_map.ncd and2gate.ngd and2gate.pcf 
+par -w -intstyle ise -ol high -t 1 and2gate_map.ncd and2gate.ncd and2gate.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml and2gate.twx and2gate.ncd -o and2gate.twr and2gate.pcf 
+bitgen -intstyle ise -f and2gate.ut and2gate.ncd 
+xst -intstyle ise -ifn "G:/Digital/AND2gate/and2gate.xst" -ofn "G:/Digital/AND2gate/and2gate.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc and2gate.ucf -p xc3s500e-fg320-4 and2gate.ngc and2gate.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o and2gate_map.ncd and2gate.ngd and2gate.pcf 
+par -w -intstyle ise -ol high -t 1 and2gate_map.ncd and2gate.ncd and2gate.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml and2gate.twx and2gate.ncd -o and2gate.twr and2gate.pcf -ucf and2gate.ucf 
+bitgen -intstyle ise -f and2gate.ut and2gate.ncd 

@@ -1,0 +1,12 @@
+NET "In3" LOC = "N17";
+NET "In2" LOC = "H18";
+NET "In1" LOC = "L14";
+NET "In0" LOC = "L13";
+NET "A" LOC = "B4";
+NET "B" LOC = "A4";
+NET "C" LOC = "D5";
+NET "D" LOC = "C5";
+NET "E" LOC = "A6";
+NET "F" LOC = "B6";
+NET "G" LOC = "E7";
+//NET "SegSel" LOC = "F7";

@@ -1,0 +1,12 @@
+NET "Clk_In" LOC = "C9";
+NET "Rst" LOC = "K17" | PULLDOWN;
+NET "Div_Rst" LOC = "D18" | PULLDOWN;
+NET "Enable" LOC = "N17";
+NET "UpDown" LOC = "H18";
+NET "A" LOC = B4;
+NET "B" LOC = A4;
+NET "C" LOC = D5;
+NET "D" LOC = C5;
+NET "E" LOC = A6;
+NET "F" LOC = B6;
+NET "G" LOC = E7;

@@ -1,0 +1,8 @@
+Release 14.2 Drc P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Fri Nov 17 14:48:57 2017
+
+drc -z Top_Mod.ncd Top_Mod.pcf
+
+DRC detected 0 errors and 0 warnings.

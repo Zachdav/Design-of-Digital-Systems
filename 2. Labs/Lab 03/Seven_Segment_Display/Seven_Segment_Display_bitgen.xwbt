@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=F:\Digital\Lab03\Seven_Segment_Display\Seven_Segment_Display.ncd
+OUTFILE=F:\Digital\Lab03\Seven_Segment_Display\Seven_Segment_Display.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=F:\Digital\Lab03\Seven_Segment_Display
+LICENSE=WebPack
+USER_INFO=206971330_0_0_375

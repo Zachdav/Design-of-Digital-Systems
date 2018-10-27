@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=F:\Digital\Lab03\Seven_Segment_Display\impact.xsl
+OUTFILE=F:\Digital\Lab03\Seven_Segment_Display\impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=F:\Digital\Lab03\Seven_Segment_Display
+LICENSE=iMPACT
+USER_INFO=iMPACT

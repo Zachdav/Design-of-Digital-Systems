@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "G:/Final Project/Final_Project/ReactionTimer_tb_isim_beh.exe" -prj "G:/Final Project/Final_Project/ReactionTimer_tb_beh.prj" "work.ReactionTimer_tb" "work.glbl" 

@@ -1,0 +1,8 @@
+verilog work "LCDInterface.v"
+verilog work "Bin2BCD.v"
+verilog work "ReactionTimer.v"
+verilog work "RandomGen.v"
+verilog work "LCDDisplay.v"
+verilog work "LCDClkDiv.v"
+verilog work "ClkDiv.v"
+verilog work "Top_Mod.v"

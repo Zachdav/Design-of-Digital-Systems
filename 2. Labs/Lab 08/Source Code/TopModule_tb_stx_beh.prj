@@ -1,0 +1,8 @@
+verilog isim_temp "TwoByOneMux.v"
+verilog isim_temp "SegDisplay.v"
+verilog isim_temp "Refresher.v"
+verilog isim_temp "Counter.v"
+verilog isim_temp "ClockDivider.v"
+verilog isim_temp "BinaryToBCD.v"
+verilog isim_temp "TopModule_tb.v"
+verilog isim_temp "C:/Xilinx/14.2/ISE_DS/ISE//verilog/src/glbl.v"

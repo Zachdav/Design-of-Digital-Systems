@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=G:\Digital\AND2gate\invgate.ncd
+OUTFILE=G:\Digital\AND2gate\invgate.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=G:\Digital\AND2gate
+LICENSE=WebPack
+USER_INFO=206971330_0_0_375

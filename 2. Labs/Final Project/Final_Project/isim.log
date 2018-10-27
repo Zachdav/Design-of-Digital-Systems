@@ -1,0 +1,22 @@
+ISim log file
+Running: G:\Final Project\Final_Project\ReactionTimer_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb G:/Final Project/Final_Project/ReactionTimer_tb_isim_beh.wdb 
+ISim P.28xd (signature 0xa0883be4)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+WARNING: File "G:/Final Project/Final_Project/ReactionTimer_tb.v" Line 22.  For instance ReactionTimer_tb/LCDDisplay_tb/, width 4 of formal port LCD_Data is not equal to width 1 of actual signal LCD_Data.
+WARNING: File "G:/Final Project/Final_Project/ReactionTimer_tb.v" Line 15.  For instance ReactionTimer_tb/ReactionTimer_tb/, width 13 of formal port RandomValue is not equal to width 12 of actual signal RandomValue.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 10.00us
+# run all
+Stopped at time : 281492240 ns : File "G:/Final Project/Final_Project/ReactionTimer_tb.v" Line 26
+# restart
+# run 10.00us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

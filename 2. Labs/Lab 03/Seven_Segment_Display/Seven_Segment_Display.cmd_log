@@ -1,0 +1,14 @@
+vhdtdtfi -lang verilog -prj Seven_Segment_Display -o F:/Digital/Lab03/Seven_Segment_Display/Seven_Segment_Display.vhi -lib work F:/Digital/Lab03/Seven_Segment_Display//Seven_Segment_Display.v -module Seven_Segment_Display -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror 
+xst -intstyle ise -ifn "F:/Digital/Lab03/Seven_Segment_Display/Seven_Segment_Display.xst" -ofn "F:/Digital/Lab03/Seven_Segment_Display/Seven_Segment_Display.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Seven_Segment_Display.ucf -p xc3s500e-fg320-4 Seven_Segment_Display.ngc Seven_Segment_Display.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Seven_Segment_Display.ucf -p xc3s500e-fg320-4 Seven_Segment_Display.ngc Seven_Segment_Display.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Seven_Segment_Display_map.ncd Seven_Segment_Display.ngd Seven_Segment_Display.pcf 
+par -w -intstyle ise -ol high -t 1 Seven_Segment_Display_map.ncd Seven_Segment_Display.ncd Seven_Segment_Display.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Seven_Segment_Display.twx Seven_Segment_Display.ncd -o Seven_Segment_Display.twr Seven_Segment_Display.pcf -ucf Seven_Segment_Display.ucf 
+bitgen -intstyle ise -f Seven_Segment_Display.ut Seven_Segment_Display.ncd 
+xst -intstyle ise -ifn "F:/Digital/Lab03/Seven_Segment_Display/Seven_Segment_Display.xst" -ofn "F:/Digital/Lab03/Seven_Segment_Display/Seven_Segment_Display.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Seven_Segment_Display.ucf -p xc3s500e-fg320-4 Seven_Segment_Display.ngc Seven_Segment_Display.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Seven_Segment_Display_map.ncd Seven_Segment_Display.ngd Seven_Segment_Display.pcf 
+par -w -intstyle ise -ol high -t 1 Seven_Segment_Display_map.ncd Seven_Segment_Display.ncd Seven_Segment_Display.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Seven_Segment_Display.twx Seven_Segment_Display.ncd -o Seven_Segment_Display.twr Seven_Segment_Display.pcf -ucf Seven_Segment_Display.ucf 
+bitgen -intstyle ise -f Seven_Segment_Display.ut Seven_Segment_Display.ncd 

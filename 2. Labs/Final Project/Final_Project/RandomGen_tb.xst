@@ -1,0 +1,5 @@
+set -tmpdir "F:/Final Project/Final_Project/xst/projnav.tmp"
+set -xsthdpdir "F:/Final Project/Final_Project/xst"
+elaborate
+-ifn RandomGen_tb.prj
+-ifmt mixed

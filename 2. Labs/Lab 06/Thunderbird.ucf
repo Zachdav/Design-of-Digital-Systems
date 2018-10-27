@@ -1,0 +1,11 @@
+NET "Div_Rst" LOC = "L13";
+NET "Clk_In" LOC = "C9";
+NET "Rst" LOC = "L14";
+NET "R" LOC = "H18";
+NET "L" LOC = "N17";
+NET "LC" LOC = "D11";
+NET "LB" LOC = "C11";
+NET "LA" LOC = "F11";
+NET "RA" LOC = "E11";
+NET "RB" LOC = "E12";
+NET "RC" LOC = "F12";

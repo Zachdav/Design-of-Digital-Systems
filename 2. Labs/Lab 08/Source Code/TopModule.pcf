@@ -1,0 +1,21 @@
+//! **************************************************************************
+// Written by: Map P.28xd on Wed Nov 08 15:59:59 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "Selector" LOCATE = SITE "F7" LEVEL 1;
+COMP "DivRst" LOCATE = SITE "D18" LEVEL 1;
+COMP "A" LOCATE = SITE "B4" LEVEL 1;
+COMP "B" LOCATE = SITE "A4" LEVEL 1;
+COMP "C" LOCATE = SITE "D5" LEVEL 1;
+COMP "Rst" LOCATE = SITE "K17" LEVEL 1;
+COMP "D" LOCATE = SITE "C5" LEVEL 1;
+COMP "E" LOCATE = SITE "A6" LEVEL 1;
+COMP "F" LOCATE = SITE "B6" LEVEL 1;
+COMP "G" LOCATE = SITE "E7" LEVEL 1;
+COMP "Clk" LOCATE = SITE "C9" LEVEL 1;
+COMP "UpDown" LOCATE = SITE "H18" LEVEL 1;
+COMP "Enable" LOCATE = SITE "N17" LEVEL 1;
+NET "Clk_BUFGP/IBUFG" BEL "Clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

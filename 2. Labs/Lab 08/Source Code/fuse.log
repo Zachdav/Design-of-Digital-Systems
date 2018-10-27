@@ -1,0 +1,30 @@
+Running: C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o Z:/Lab 08/TopModule_tb_isim_beh.exe -prj Z:/Lab 08/TopModule_tb_beh.prj work.TopModule_tb work.glbl 
+ISim P.28xd (signature 0xa0883be4)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "Z:/Lab 08/TwoByOneMux.v" into library work
+Analyzing Verilog file "Z:/Lab 08/SegDisplay.v" into library work
+Analyzing Verilog file "Z:/Lab 08/Refresher.v" into library work
+Analyzing Verilog file "Z:/Lab 08/Counter.v" into library work
+Analyzing Verilog file "Z:/Lab 08/ClockDivider.v" into library work
+Analyzing Verilog file "Z:/Lab 08/BinaryToBCD.v" into library work
+Analyzing Verilog file "Z:/Lab 08/TopModule_tb.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.2/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:189 - "Z:/Lab 08/TopModule_tb.v" Line 15: Size mismatch in connection of port <Refresh>. Formal port size is 2-bit while actual signal size is 1-bit.
+Completed static elaboration
+Compiling module Clock_Divider
+Compiling module Counter
+Compiling module BinToBCD
+Compiling module Refresh
+Compiling module Mux2x1
+Compiling module Seven_Segment_Display
+Compiling module TopModule_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 8 Verilog Units
+Built simulation executable Z:/Lab 08/TopModule_tb_isim_beh.exe
+Fuse Memory Usage: 29868 KB
+Fuse CPU Usage: 452 ms

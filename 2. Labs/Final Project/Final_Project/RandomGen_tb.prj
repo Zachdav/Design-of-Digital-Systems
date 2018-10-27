@@ -1,0 +1,2 @@
+verilog work "RandomGen.v"
+verilog work "RandomGen_tb.v"

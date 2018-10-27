@@ -1,0 +1,8 @@
+verilog work "TwoByOneMux.v"
+verilog work "SegDisplay.v"
+verilog work "Refresher.v"
+verilog work "Counter.v"
+verilog work "ClockDivider.v"
+verilog work "BinaryToBCD.v"
+verilog work "TopModule_tb.v"
+verilog work "C:/Xilinx/14.2/ISE_DS/ISE//verilog/src/glbl.v"

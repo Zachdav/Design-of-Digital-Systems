@@ -1,0 +1,3 @@
+verilog work "Seven_Segment_Display.v"
+verilog work "Seven_Segment_Display_tb.v"
+verilog work "C:/Xilinx/14.2/ISE_DS/ISE//verilog/src/glbl.v"

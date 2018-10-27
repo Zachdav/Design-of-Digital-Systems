@@ -1,0 +1,23 @@
+NET "Clk" LOC = "C9";
+NET "Rst" LOC = "K17" | PULLDOWN;
+NET "DivRst" LOC = "D18" | PULLDOWN;
+
+NET "Start" LOC = "V16";
+
+NET "LED<0>" LOC = "F12";
+NET "LED<1>" LOC = "E12";
+NET "LED<2>" LOC = "E11";
+NET "LED<3>" LOC = "F11";
+NET "LED<4>" LOC = "C11";
+NET "LED<5>" LOC = "D11";
+NET "LED<6>" LOC = "E9";
+NET "LED<7>" LOC = "F9";
+
+NET "LCD_E" LOC = "M18";
+NET "LCD_RS" LOC = "L18";
+NET "LCD_RW" LOC = "L17";
+
+NET "LCD_Data<8>" LOC = "R15";
+NET "LCD_Data<9>" LOC = "R16";
+NET "LCD_Data<10>" LOC = "P17";
+NET "LCD_Data<11>" LOC = "M15";

@@ -1,0 +1,7 @@
+verilog isim_temp "LCDInterface.v"
+verilog isim_temp "Bin2BCD.v"
+verilog isim_temp "ReactionTimer.v"
+verilog isim_temp "RandomGen.v"
+verilog isim_temp "LCDDisplay.v"
+verilog isim_temp "ReactionTimer_tb.v"
+verilog isim_temp "C:/Xilinx/14.2/ISE_DS/ISE//verilog/src/glbl.v"

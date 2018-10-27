@@ -1,0 +1,18 @@
+xst -intstyle ise -ifn "G:/Digital/AND2gate/or2gate.xst" -ofn "G:/Digital/AND2gate/or2gate.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc and2gate.ucf -p xc3s500e-fg320-4 or2gate.ngc or2gate.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o or2gate_map.ncd or2gate.ngd or2gate.pcf 
+par -w -intstyle ise -ol high -t 1 or2gate_map.ncd or2gate.ncd or2gate.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml or2gate.twx or2gate.ncd -o or2gate.twr or2gate.pcf -ucf and2gate.ucf 
+bitgen -intstyle ise -f or2gate.ut or2gate.ncd 
+xst -intstyle ise -ifn "G:/Digital/AND2gate/or2gate.xst" -ofn "G:/Digital/AND2gate/or2gate.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc and2gate.ucf -p xc3s500e-fg320-4 or2gate.ngc or2gate.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o or2gate_map.ncd or2gate.ngd or2gate.pcf 
+par -w -intstyle ise -ol high -t 1 or2gate_map.ncd or2gate.ncd or2gate.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml or2gate.twx or2gate.ncd -o or2gate.twr or2gate.pcf -ucf and2gate.ucf 
+bitgen -intstyle ise -f or2gate.ut or2gate.ncd 
+xst -intstyle ise -ifn "G:/Digital/AND2gate/or2gate.xst" -ofn "G:/Digital/AND2gate/or2gate.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc or2gate.ucf -p xc3s500e-fg320-4 or2gate.ngc or2gate.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o or2gate_map.ncd or2gate.ngd or2gate.pcf 
+par -w -intstyle ise -ol high -t 1 or2gate_map.ncd or2gate.ncd or2gate.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml or2gate.twx or2gate.ncd -o or2gate.twr or2gate.pcf -ucf or2gate.ucf 
+bitgen -intstyle ise -f or2gate.ut or2gate.ncd 

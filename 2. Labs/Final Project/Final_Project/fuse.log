@@ -1,0 +1,32 @@
+Running: C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o G:/Final Project/Final_Project/ReactionTimer_tb_isim_beh.exe -prj G:/Final Project/Final_Project/ReactionTimer_tb_beh.prj work.ReactionTimer_tb work.glbl 
+ISim P.28xd (signature 0xa0883be4)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "G:/Final Project/Final_Project/LCDInterface.v" into library work
+Analyzing Verilog file "G:/Final Project/Final_Project/Bin2BCD.v" into library work
+Analyzing Verilog file "G:/Final Project/Final_Project/ReactionTimer.v" into library work
+Analyzing Verilog file "G:/Final Project/Final_Project/RandomGen.v" into library work
+Analyzing Verilog file "G:/Final Project/Final_Project/LCDDisplay.v" into library work
+Analyzing Verilog file "G:/Final Project/Final_Project/ReactionTimer_tb.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.2/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:329 - "G:/Final Project/Final_Project/ReactionTimer_tb.v" Line 22: Target <LCDAck> of concurrent assignment or output port connection should be a net type.
+WARNING:HDLCompiler:189 - "G:/Final Project/Final_Project/ReactionTimer_tb.v" Line 22: Size mismatch in connection of port <LCD_Data>. Formal port size is 4-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "G:/Final Project/Final_Project/ReactionTimer_tb.v" Line 23: Size mismatch in connection of port <RandomValue>. Formal port size is 13-bit while actual signal size is 12-bit.
+Completed static elaboration
+Compiling module RandomGen
+Compiling module LCDCntrl
+Compiling module LCDDriver
+Compiling module LCDInterface
+Compiling module Bin2BCD
+Compiling module LCDDisplay
+Compiling module ReactionTimer
+Compiling module ReactionTimer_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 9 Verilog Units
+Built simulation executable G:/Final Project/Final_Project/ReactionTimer_tb_isim_beh.exe
+Fuse Memory Usage: 28284 KB
+Fuse CPU Usage: 577 ms

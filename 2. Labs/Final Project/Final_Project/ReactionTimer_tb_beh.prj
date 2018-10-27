@@ -1,0 +1,7 @@
+verilog work "LCDInterface.v"
+verilog work "Bin2BCD.v"
+verilog work "ReactionTimer.v"
+verilog work "RandomGen.v"
+verilog work "LCDDisplay.v"
+verilog work "ReactionTimer_tb.v"
+verilog work "C:/Xilinx/14.2/ISE_DS/ISE//verilog/src/glbl.v"
